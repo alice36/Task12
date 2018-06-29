@@ -2,14 +2,16 @@ import java.util.*;
 
 public class Task12_1 {
     public static void main(String[] args) {
+        ArrayList<Integer> arrayList = new ArrayList<>();
         TreeSet<Integer> treeSet = new TreeSet<>();
 
         Random rand = new Random();
 
         for (int i = 0; i < 50; i++) {
-            treeSet.add(rand.nextInt(1000));
+            arrayList.add(rand.nextInt(1000));
+            treeSet.add(arrayList.get(i));
         }
-
+        System.out.println(arrayList.size());
         System.out.println("Najmniejsza z liczb to " + treeSet.first());
         System.out.println("Największa z liczb to " + treeSet.last());
         System.out.println("Srednia liczb to " + average(treeSet));
